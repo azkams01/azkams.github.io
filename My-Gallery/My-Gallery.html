@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Tugas PWPB AZKA</title>
+    </head>
+    <style>
+        
+        body{
+            height: 100vh;
+            background-color: #ccc;
+            text-align: center;
+            background: linear-gradient(to right, rgb(129, 174, 241) , rgb(216, 216, 141));
+           
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            color:rgba(38, 33, 163, 0.897);
+            text-shadow: 5px 5px 2px rgb(125, 148, 41);
+            margin: 20px;
+        }
+        h2{
+            font-size: 25px;
+            text-align: center;
+            color:rgba(38, 33, 163, 0.897);
+            text-shadow: 5px 5px 2px rgb(125, 148, 41);
+            margin-top: -20px;
+        }
+        .badan{background-color: black;
+        width: 600px;
+        margin: auto;
+        border: 5px solid rgb(125, 148, 41);
+        border-radius: 5px;
+        }
+
+        .foto-saya{width: 600px; height: 400px;}
+        .backsound{width: 600px; }
+        .video{width: 600px; opacity: 0.9;}
+        .foto-saya1{width: 200px; height: 150px;  float: left; border: 2px solid rgb(125, 148, 41); box-sizing: border-box;}
+        .foto-saya1:hover{opacity: 0.5; background: linear-gradient(to bottom, rgb(216, 152, 106) , rgb(185, 185, 38));}
+        .foto-saya2{width: 200px; height: 150px;  float: left; border: 2px solid rgb(125, 148, 41); box-sizing: border-box;}
+        .foto-saya2:hover{opacity: 0.5; background: linear-gradient(to bottom, rgb(216, 152, 106) , rgb(185, 185, 38));}
+
+
+        div p{
+            width: 150px;
+            background:linear-gradient(to right, grey,yellow);
+            position: absolute;
+            left: 9%;
+            top: 15%;
+            transform: translatex(0%);
+                transition: all 1s;
+                opacity: 0.8;
+                font-size: 20px;
+                text-align: center;
+                padding: 50px;
+                color: rgb(15, 97, 83);
+                z-index: -1;
+                border-left: 5px dashed rgb(24, 24, 75);
+        }
+        div p.slide{
+            transform: translatex(100%);
+                opacity: 1;
+            }
+
+        div b{
+            width: 150px;
+            background:linear-gradient(to right, grey,yellow);
+            position: absolute;
+            right: 47%;
+            bottom: 1%;
+            transform: translatex(100%);
+                transition: all 1s;
+                opacity: 0.8;
+                text-align: center;
+                padding: 50px;
+                color: rgb(15, 97, 83);
+                z-index: -1;             
+                border: 5px dotted rgb(24, 24, 75);
+                border-radius: 20px;
+        }
+        div b.slide{
+            transform: translatex(225%);
+                opacity: 1;
+            }
+      
+      
+    </style>
+    <body>
+        <h1> Azka Mulia Saputra</h1>
+        <h2>XI RPL 1</h2>
+        <div class="badan"><video class="video" controls><source src="video perkenalan.mp4" type="video/mp4"></video>
+            <img src="foto saya1.jpg" class="foto-saya1">
+            <img src="foto saya 3.jpg" class="foto-saya1">
+            <img src="foto saya 4.jpg" class="foto-saya2">
+        <audio class="backsound" controls><source src="backsound.mp3" type="audio/mp3"></audio>
+        </div>
+        <div><p>"Tidak Akan Bisa Jika Tidak Mencoba"<br>-Azka Mulia S</p></div>
+        <div><b>"Web Developer Salah Satu Cita-Cita Yang Membuat Saya Bergerak Untuk Menghasilkan Yang Terbaik"</b></div>
+        <script src="tugaspwpb.js"></script>
+    </body>
+</html>
