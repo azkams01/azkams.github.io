@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Kara Ichi's</title>
+    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Pacifico&family=Space+Mono&display=swap" rel="stylesheet"> 
+    <style>
+        *{
+            margin: 0px;
+           
+        }
+        
+        body{
+        background: linear-gradient(to right, pink,teal); overflow-x: hidden;
+        opacity: 0.9;}
+       
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background: linear-gradient(to top, rgb(206, 182, 186),rgb(81, 175, 175) 100%);
+            height: 70px;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom:5px double rgb(199, 134, 134);
+            border-right:5px dashed rgb(199, 134, 134);
+            border-left:5px dashed rgb(199, 134, 134);
+            
+        }
+      
+       nav .lambang {
+        letter-spacing: 5px;
+         font-family: 'Space Mono', monospace;}
+
+        nav .lambang h2{padding-left: 85px; color: rgb(150, 61, 90); text-shadow: 3px 2px 1px rgb(248, 127, 70); cursor: pointer;} 
+        nav .lambang h3{color: rgb(2, 66, 66); font-size: 20px; text-shadow: 3px 2px 1px rgb(30, 158, 231); cursor: pointer;}
+        nav .lambang h2:hover{color: rgb(177, 236, 38);}
+        nav .lambang h3:hover{color: rgb(177, 236, 38);}
+    
+        nav ul{
+            display: flex;
+            list-style: none;
+            width: 40%;
+            justify-content: space-evenly;
+        }
+        nav ul li a{text-decoration: none;
+        color: rgb(114, 72, 38);
+        font-family:  'Londrina Solid', cursive;
+        border-right: 5px solid pink;
+    border-left: 5px solid teal;
+    border-top: 5px double pink;
+    border-bottom: 5px double teal;
+    border-radius: 20px;
+    background: linear-gradient(to top, pink,teal);
+    padding: 10px;
+    letter-spacing: 2px;
+      
+        }
+
+        nav ul li a:hover{color: yellow; opacity: 0.5; background: linear-gradient(to top, rgb(53, 130, 231),rgb(177, 236, 38));}
+        .burger{
+            display: none;
+            flex-direction: column;
+            height: 20px;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .burger span{
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+        }
+
+        
+
+        @media screen and (max-width: 768px){
+            nav ul{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 576px){
+            .burger{
+                display: flex;
+            }
+            nav ul{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 120vh;
+                width: 60%;
+                padding-top: 40px;
+                justify-content: space-evenly;
+                flex-direction: column;
+                background-color: black;
+                z-index: -1;
+                align-items: center;
+                background: linear-gradient(to right, pink,teal);
+                transform: translatex(100%);
+                transition: all 1s;
+                opacity: 0.8;
+            }
+            .burger span:nth-child(1){
+                background-color: rgb(248, 103, 103);
+            }
+            .burger span:nth-child(2){
+                background-color: rgb(248, 103, 103);
+            }
+            .burger span:nth-child(3){
+                background-color: rgb(248, 103, 103);
+            }
+            .burger span:hover {
+                background-color: white;
+
+            }
+            nav ul.slide{
+                transform: translatex(0);
+                opacity: 1;
+            }
+        }
+ 
+   
+        
+
+        .sekat{width: 1180px;   background-color: black; position:relative; left: 92px; top: 10px; }
+        #header{width: 1200px; height: 100px;  position: absolute; top: 0px; z-index: -2;}
+        #da{ width: 100px; height: 100px;}
+        .table{position: absolute; top: 20px; width: 1180px; height: 530px; color: black; z-index: -2; }
+        #nomor{width: 40px; height: 30px;  }
+        #hd {background-color: gray;}
+        #du{ width: 100px; height: 100px;}
+        #dn{ width: 100px; height: 100px;}
+        #ds{width: 100px; height: 100px;}
+        #hasil{position: absolute;}
+        .thumb{width: 50px; height: 50px; position: fixed; right: 13px; bottom: 210px; background-color: yellow; border-radius: 50%; z-index: -2;}
+        #forum{position: absolute; top: 0px; }
+        .thumb1{position: relative; width: 50px; height: 50px; border-radius: 50%;}
+        .thumb:hover{
+            background-color: black;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        #tabel tr:nth-child(1){background-color: peru;}
+        #tabel:active{ color: white;}
+        .pesan:hover{color: pink;}
+        .thumb3{ position: absolute; right: -2px; padding: 24px 24px; border: 2px solid pink; border-radius: 50%; }
+        #da, #du, #dn, #ds{border: 2px solid black; border-radius: 50%;}
+        .info{width: 50px; height: 94px; position: fixed; right: 10px; bottom: 270px; background-color: teal; 
+        border: 3px solid peru; border-radius: 20px; z-index: -2;}
+        .info:hover{opacity: 0.5; background-color: pink; cursor: pointer; }
+        .info h1{color: wheat; text-align: center; margin: auto; font-size: 20px ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        .info h1:hover{color: black;}
+        .data{width: 50px; height: 94px; position: fixed; right: 10px; bottom: 380px; background-color: teal; 
+        border: 3px solid peru; border-radius: 20px; z-index: -2;}
+        .data:hover{opacity: 0.5; background-color: pink; cursor: pointer; }
+        .data h1{color: wheat; text-align: center; margin: auto; font-size: 20px ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        .data h1:hover{color: black;}
+        .footer{
+            height: 150px;
+            width: 220vh;
+            background: linear-gradient(to top , rgb(214, 160, 169) , rgb(2, 153, 153));
+            bottom: -325px;
+            position: absolute;
+            z-index: -1;
+            border-top:5px double rgb(199, 134, 134);
+            border-right:5px dashed rgb(199, 134, 134);
+            border-left:5px dashed rgb(199, 134, 134);
+        }
+        .foot{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 27px;
+            left: 50px;
+            opacity: 0.7;
+            }
+        .foot:hover{
+            opacity: 0.3;
+        }
+        .foot-judul{
+            text-align: center;
+            padding-top: 25px;
+            opacity: 0.8;
+        }    
+        .foot-judul:hover{
+            color: pink;
+        }
+        .layanan{
+            text-decoration: none;    
+            list-style: none;
+            padding-left: 800px;
+            padding-top: 30px;
+        }
+        .layanan li{
+            padding-top: 10px;
+        }
+        .layanan li a{
+
+            text-decoration: none;
+        }
+        .ikuti{
+            
+            list-style: none;
+            position: absolute;
+            top: 30px;
+            left: 1000px;
+
+        }
+        .ikuti li{
+            
+            padding-top: 10px;
+
+        }
+        .ikuti li a{
+            text-decoration: none;
+        }
+        .layanan li a:hover{
+            color: pink;
+            opacity: 0.5;
+
+        }
+        .ikuti li a:hover{
+            color: pink;
+            opacity: 0.5;
+
+        }
+        .belanja{
+            position: absolute;
+            bottom: -70px;
+            left: 600px;
+            opacity: 0.8;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-shadow: 3px 2px 1px pink;
+        }
+        .nyaman{
+            position: absolute;
+            bottom: -120px;
+            left: 540px;
+            opacity: 0.8;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-shadow: 3px 2px 1px teal;
+        }
+        .belanja:hover{
+            color: chartreuse;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .nyaman:hover{
+           color: chartreuse;
+           opacity: 0.5;
+           cursor: pointer;
+        }
+        
+        
+        
+     
+
+
+    </style>
+    <body>
+        <nav>
+            <div class="lambang"> <h2>からいち</h2><h3> Kara Ichi's Food</h3></div>
+            <ul class="slide">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="My-Gallery/My-Gallery.html">My Galerry</a></li>
+            
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="sekat">
+            <div id="header"><br>
+            <table border="2" cellpadding="5" cellspacing="3" id="tabel" class="table">
+                <tr>
+                    <th>Preview</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            
+               <tr>
+                   <th><img src="dimsumayam.jpg" id="da"></th>
+                   <th>Dimsum Ayam</th>
+                   <th>15k</th>
+                   <th><form action="">
+                       <input type="number" min="0" id="nomor">
+                   </form></th>
+                   <th rowspan="5"><form action="">
+                       <button class="pesan">Pesan</button>
+                    </tr>
+                   <tr>
+                    <th><img src="dimsumudang.jpg" id="du"></th>
+                    <th>Dimsum Udang</th>
+                    <th>15k</th>
+                    <th><form action="">
+                        <input type="number" min="0" id="nomor">
+                    </form></th>
+                    
+                   </tr>
+                   <tr>
+                    <th><img src="dimsumnori.jpg" id="dn"></th>
+                    <th>Dimsum Nori</th>
+                    <th>15k</th>
+                    <th><form action="">
+                        <input type="number" min="0" id="nomor">
+                    </form></th>
+                    
+                    <tr>
+                        <th><img src="dimsumsayur.jpg" id="ds"></th>
+                        <th>Dimsum Sayur</th>
+                        <th>15k</th>
+                        <th><form action="">
+                            <input type="number" min="0" id="nomor">
+                        </form></th>
+                       
+                   </tr>
+                  
+              
+            </table>
+            
+        
+        </div>
+      
+        <div class="thumb">
+            <img src="Stiker ichi.jpg" class="thumb1">
+            <a href="Permainan Diskon.html" class="thumb3"></a>
+        </div>
+        <div class="info"><h1>I <br>N <br>F <br>O</h1></div>
+        <div class="data"><h1>D <br>A <br>T <br>A</h1></div>
+     
+    </div>
+    <div class="footer"> 
+        <img src="Stiker ichi.jpg" alt="" class="foot">
+        <ul class="layanan">
+            <h2>Layanan</h2>
+            <li> <a href="">Bantuan</a></li>
+            <li> <a href="">Blog</a></li>
+        </ul>
+        <ul class="ikuti">
+            <h2>Ikuti Kami di</h2>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Whatsapp</a> </li>
+        </ul>
+       
+    </div>
+    <h2 class="h2 belanja">Selamat Belanja</h2>
+    <h2 class="h2 nyaman">Anda Nyaman Kami Tenang</h2>
+    
+     <script src="javadimsum.js"></script>
+    </body>
+</html>
