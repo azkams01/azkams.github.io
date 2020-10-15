@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>Pemainan Diskon</title>
+    </head>
+    <style>
+  
+
+body {
+    background-color: white;
+    background-image: url(background-suit.png);
+    background-size: cover;
+    
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px ;
+    margin-top: 30px;
+    margin-left: 10px;
+    color: pink;
+    text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa, 1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa, 3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa, 4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa, 6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa, 7.7781745931px 7.7781745931px 0 #aaaaaa;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.area-komputer {
+    width: 300px;
+    height: 420px;
+    margin: auto 360px;
+    background-color: lightblue;
+    background: linear-gradient(to bottom, rgba(255,50,0,1) 0%, rgba(98,134,22,1) 100%);
+    position: relative;
+    padding-top: 40px;
+    box-sizing: border-box;
+    border-radius: 40px 40px 40px 40px;
+   
+    
+}
+
+.area-player {
+    width: 300px;
+    height: 420px;
+    top: -437px;
+    right: 50px;
+    background-color: lightgreen;
+    background: linear-gradient(to bottom, rgba(0,200,255,1) 0%, rgba(145,232,66,1) 100%);
+    position: relative;
+    border-radius: 40px;
+}
+
+.info {
+    width: 105px;
+    height: 60px;
+    border-right: 5px solid red;
+    border-left: 5px solid blue;
+    border-top: 5px double red;
+    border-bottom: 5px double blue;
+    position: absolute;
+    top: 230px; 
+    right: 258px;
+    border-radius: 20px;
+    z-index: 1;
+    text-align: center;
+    line-height: 60px;
+    color: greenyellow;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    background-color: rgba(255,22,100,0.5);
+}
+
+.info:hover{color: red;}
+
+
+
+ul {
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+
+
+img {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.kertas, .gunting, .batu {
+    transition: .3s;
+    position: relative;
+    top:0;
+    cursor: pointer;
+}
+
+.kertas:hover, .gunting:hover, .batu:hover, .active {
+    box-shadow: 0 0 10px 5px limegreen;
+    opacity: 0.5;
+    color: pink;
+}
+
+.kertas:active, .gunting:active, .batu:active {
+    top: 2px;
+}.thumb{width: 50px; height: 50px; position: fixed; right: 20px; bottom: 10px; background-color: yellow; border-radius: 50% ;}
+.thumb1{position: relative; width: 50px; height: 50px;}
+        .thumb:hover{
+            color: pink;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+.thumb3{ position: absolute; right: -2px; top: 0px; padding: 24px 24px; opacity: 200%; border: 2px solid pink; border-radius: 50%; }
+.v{font-size: 70px; position: absolute; top: 120px; left: 285px; font-family: monospace; color: rgba(0,200,255,1); cursor: pointer;}
+.s{ color: rgba(255,50,0,1);}       
+.v:hover{color:  rgba(255,50,0,1);}  
+.s:hover{color: rgba(0,200,255,1);}   
+.p{font-size: 40px; ;  font-family: monospace;  position: relative; left: 30px; 
+    text-shadow: 3px 2px 1px blue; color: rgba(255,22,100,1); opacity: 0.5;}
+.c{font-size: 40px; ;  font-family: monospace;  position: relative; right: -315px; 
+    text-shadow: 3px 2px 1px blue; color: rgba(255,22,100,1); opacity: 0.5; position: absolute; right: 52px; top: 22px;}      
+
+
+    </style>
+    <body>
+        <h1>Menangkan Suit Untuk Mendapatkan Diskon</h1><br>
+
+    <div class="container">
+        <b class="v">V<b class="s">S</b></b> 
+        <b class="p">Player</b>
+        <b class="c">Comp</b>
+        <div class="area-komputer"> <br><br><br><br><br><br>
+            <img src="img/gunting.png" class="img-komputer">
+        </div>
+        <div class="info"><b><marquee></marquee></b></div>
+        <div class="area-player">
+            <ul>
+                    <img src="img/kertas.png" class="kertas">
+                    <img src="img/gunting.png" class="gunting">
+                    <img src="img/batu.png" class="batu">
+            </ul>
+        </div>
+
+        <div class="thumb">
+            <img src="Stiker ichi.jpg" class="thumb1">
+            <a href="Kara Ichi's Food.html" class="thumb3"></a>
+        </div>
+    </div>
+    <script src="pemainandiskon.js"></script>
+    </body>
+</html>
